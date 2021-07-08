@@ -5,19 +5,25 @@ def jogar_forca ():
     print("********************************")
 
     palavra_secreta = "banana"
+    letras_acertadas = ["_","_","_","_","_","_"]
+
     acertou = False
     enforcou = False
 
+    print(palavra_acertada)
+
     while (not enforcou and not acertou):
+
         chute = input("Qual a letra?")
         chute = chute.strip()
 
         index = 0
         for letra in palavra_secreta:
-            if(chute.uper() == letra.uper()):
-                print("Ëncontrei a letra {} na posicao {}".format(letra,index))
+            if(chute.upper() == letra.upper()):
+                letras_acertadas[index] = letra
             index = index + 1
-        print("jogando...")
+
+        print(letras_acertadas)
 
     print("fim do jogo")
 
